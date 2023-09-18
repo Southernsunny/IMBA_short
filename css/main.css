@@ -89,6 +89,12 @@ button {
 }
 
 .mobile-menu__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
@@ -306,6 +312,7 @@ button {
 @media screen and (min-width: 768px) {
   .header-button {
     padding: 15px 41px;
+    border: 1px solid transparent;
     color: #ffffff;
     background-color: #2B2B2A;
     font-weight: 400;
@@ -331,7 +338,6 @@ button {
   }
 }
 
-/*^ join */
 .hero {
   position: relative;
   background-color: #5e5e5e;

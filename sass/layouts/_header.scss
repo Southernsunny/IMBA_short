@@ -123,6 +123,7 @@
 
   @include tablet {
     padding: 15px 41px;
+    border: 1px solid transparent;
     color: $secondary-text-color;
     background-color: $primary-text-color;
     @include font(400, 16px, 1.5);
