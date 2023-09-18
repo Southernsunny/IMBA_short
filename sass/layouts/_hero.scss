@@ -1,0 +1,253 @@
+/*^ join */
+.hero {
+  position: relative;
+  background-color: #5e5e5e;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  @include backgroundImg(cover);
+  background-image: url('../images/hero-mob.jpg');
+  @include retina {
+    background-image: url('../images/hero-mob-2x.jpg');
+  }
+  &.hero::after {
+    content: '';
+    position: absolute;
+    top: 18%;
+    left: 0;
+    width: 395px;
+    height: 182px;
+    background-image: url('../../images/kurs.svg');
+    @include backgroundImg(contain);
+    z-index: 1;
+  }
+  @include tablet {
+    background-image: url('../images/hero.jpg');
+    @include retina {
+      background-image: url('../images/hero-2x.jpg');
+    }
+    &.hero::after {
+      content: '';
+      position: absolute;
+      top: 15%;
+      left: 15%;
+      width: 395px;
+      height: 182px;
+      background-image: url('../../images/kurs.svg');
+      @include backgroundImg(contain);
+      z-index: 1;
+    }
+  }
+  @include desktop {
+    max-width: 1920px;
+  }
+}
+
+.hero-container {
+  padding: 168px 16px 60px;
+  @include tablet {
+    padding: 100px 30px;
+  }
+  @include desktop {
+    padding-left: 15%;
+  }
+}
+
+.hero__title {
+  margin-bottom: 26px;
+  text-align: start;
+  @include font(900, 36px, 1.2);
+  color: $secondary-text-color;
+  position: relative;
+  z-index: 2;
+
+  @include tablet {
+    margin-bottom: 30px;
+    @include font(900, 50px, 1.2);
+  }
+}
+
+.hero__list-option {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 85px;
+  z-index: 2;
+  color: $primary-text-color;
+  @include font(500, 18px, 1.5);
+  @include tablet {
+    margin-bottom: 66px;
+  }
+}
+
+.item-option {
+  padding: 5px 20px;
+  border-radius: 30px;
+  &--online {
+    background-color: $online-color;
+  }
+  &--hit {
+    background-color: $hit-color;
+  }
+}
+
+.hero__list-advantages {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-bottom: 50px;
+  gap: 15px;
+  color: $secondary-text-color;
+  @include font(400, 18px, 1.5);
+  @include tablet {
+    margin-bottom: 75px;
+  }
+}
+
+.icon-marker {
+  margin-right: 10px;
+}
+
+//* Ціни
+.hero__cost {
+  display: flex;
+  text-align: center;
+  align-items: flex-end;
+  // justify-content: center;
+  margin-bottom: 13px;
+  @include tablet {
+    margin-bottom: 33px;
+  }
+}
+
+.cost {
+  color: $secondary-text-color;
+  @include font(400, 22px, 1.5);
+  margin-right: 9px;
+}
+
+.cost-money {
+  display: flex;
+  flex-direction: column;
+}
+
+.cost-new {
+  text-align: left;
+  color: $secondary-text-color;
+  @include font(900, 50px, 1.2);
+}
+
+.cost-last {
+  text-decoration: line-through;
+  color: #b7b7b7;
+  @include font(400, 22px, 1.5);
+}
+
+.cost-currency {
+  color: $secondary-text-color;
+  @include font(400, 18px, 1.5);
+  vertical-align: super;
+}
+
+//*
+.hero__join {
+  display: flex;
+  align-items: flex-start;
+  // justify-content: center;
+  @include tablet {
+    justify-content: flex-start;
+  }
+}
+
+.hero__join-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    margin-right: 43px;
+  }
+}
+
+.hero__btn {
+  @include centeredBtn;
+  padding: 20px 80px;
+  @include font(400, 16px, 1.5);
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  color: $primary-text-color;
+  background-color: $accent-color;
+  @include transitionX3(color, background-color, fill);
+
+  @include tablet {
+    @include font(400, 16px, 1.5);
+    padding: 20px 50px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    color: $accent-color;
+    background-color: transparent;
+  }
+}
+
+.hero__places {
+  color: $secondary-text-color;
+  margin-top: 10px;
+}
+
+.join__list-info {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    color: $secondary-text-color;
+    align-items: center;
+  }
+  @include desktop {
+    gap: 50px;
+  }
+}
+
+.join__list-info-mob {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 16px;
+  margin-bottom: 50px;
+  gap: 13px 50px;
+  color: $secondary-text-color;
+  align-items: center;
+  @include tablet {
+    display: none;
+  }
+}
+
+.item-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    width: 1px;
+    height: 43px;
+    background-color: $accent-color;
+    border-radius: 2px;
+    transform: translateY(-50%);
+  }
+
+  .label {
+    @include font(300, 16px, 1.5);
+  }
+
+  .value {
+    @include font(700, 18px, 1.5);
+  }
+}

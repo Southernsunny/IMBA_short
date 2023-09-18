@@ -1,0 +1,141 @@
+.header {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 16px;
+  margin: 0 auto;
+
+  @include desktop {
+    max-width: 1920px;
+    padding: 15px 20px;
+  }
+}
+
+.logo {
+  @include centeredFlex;
+  width: 60px;
+  height: 35px;
+
+  @include tablet {
+    min-width: 110px;
+    height: 65px;
+  }
+}
+
+//* Submenu
+
+.submenu {
+  display: none;
+  & li {
+    margin-bottom: 5px;
+    border-bottom: 1px solid $accent-color;
+    list-style: none;
+  }
+  & a {
+    color: #333;
+  }
+  & a:hover {
+    color: $accent-color;
+  }
+}
+
+.header__item:hover .submenu {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 0 0 10px 10px;
+  min-width: 100%;
+  white-space: nowrap;
+}
+
+//* List
+.header__list {
+  display: none;
+  @include desktop {
+    @include centeredFlex;
+    gap: 30px;
+  }
+}
+
+.header__item {
+  position: relative;
+  @include font(400, 16px, 1.5);
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+  color: $primary-text-color;
+  fill: $primary-text-color;
+  @include transitionX2(color, fill);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    fill: $accent-color;
+  }
+}
+
+.icon-menu {
+  margin-left: 5px;
+}
+
+//* Number
+.header-contacts {
+  display: none;
+  @include desktop {
+    display: inline;
+    text-align: center;
+    margin-right: 10px;
+    font-family: 'Inter';
+    @include font(500, 18px, 1.5);
+    color: $primary-text-color;
+  }
+}
+
+//* LogIn
+.header-button {
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  padding: 15px 25px;
+  border: none;
+
+  color: $primary-text-color;
+  background-color: transparent;
+  font-family: inherit;
+  text-align: center;
+  @include font(400, 14px, 1.5);
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @include tablet {
+    padding: 15px 41px;
+    color: $secondary-text-color;
+    background-color: $primary-text-color;
+    @include font(400, 16px, 1.5);
+    @include transitionX2(border, color);
+
+    &:hover,
+    &:focus {
+      border: 1px solid $accent-color;
+      color: $accent-color;
+    }
+  }
+}
+
+.mobile-buttons {
+  display: flex;
+  @include tablet {
+    gap: 30px;
+  }
+}
