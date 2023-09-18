@@ -125,7 +125,7 @@ button {
   color: #E0FF00;
 }
 
-.mobile-menu:hover .submenu {
+.mobile-menu__item:hover .submenu {
   display: block;
   position: absolute;
   background-color: #fff;
@@ -214,6 +214,8 @@ button {
   border-radius: 0 0 10px 10px;
   min-width: 100%;
   white-space: nowrap;
+  border: 1px solid #E0FF00;
+  z-index: 5;
 }
 
 .header__list {
