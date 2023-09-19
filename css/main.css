@@ -361,7 +361,7 @@ button {
   left: 0;
   width: 395px;
   height: 182px;
-  background-image: url("../../images/kurs.svg");
+  background-image: url("../images/kurs.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -385,7 +385,7 @@ button {
     left: 15%;
     width: 395px;
     height: 182px;
-    background-image: url("../../images/kurs.svg");
+    background-image: url("../images/kurs.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -640,6 +640,7 @@ button {
 @media screen and (min-width: 1024px) {
   .join__list-info {
     gap: 50px;
+    margin-top: 7px;
   }
 }
 

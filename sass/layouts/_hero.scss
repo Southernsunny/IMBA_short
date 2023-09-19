@@ -1,3 +1,5 @@
+//* H E R O
+
 .hero {
   position: relative;
   background-color: #5e5e5e;
@@ -16,7 +18,7 @@
     left: 0;
     width: 395px;
     height: 182px;
-    background-image: url('../../images/kurs.svg');
+    background-image: url('../images/kurs.svg');
     @include backgroundImg(contain);
     z-index: 1;
   }
@@ -32,7 +34,7 @@
       left: 15%;
       width: 395px;
       height: 182px;
-      background-image: url('../../images/kurs.svg');
+      background-image: url('../images/kurs.svg');
       @include backgroundImg(contain);
       z-index: 1;
     }
@@ -207,6 +209,7 @@
   }
   @include desktop {
     gap: 50px;
+    margin-top: 7px;
   }
 }
 
